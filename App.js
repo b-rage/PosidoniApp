@@ -6,33 +6,32 @@
 
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+import InsertEmail from './components/InsertEmail';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+
+        <View style={styles.firstBlock}>
+          <InsertEmail />
+        </View>
+        <View style={styles.secondBlock}>
+          <Text>TAKE A PHOTO</Text>
+        </View>
+        <View style={styles.firstBlock}>
+          <Text style={styles.textTitol}>SELECT TEXT</Text>
+        </View>
+        <View style={styles.firstBlock}>
+          <Text style={styles.textTitol}>SEND EMAIL !!!!</Text>
+        </View>
       </View>
     );
   }
@@ -41,18 +40,27 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    
   },
-  welcome: {
+  textTitol: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
+    color: '#FFFFFF',
     marginBottom: 5,
   },
+  firstBlock: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#67CDDC',
+  },
+  secondBlock: {
+    flex: 3,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#E6E7DF',
+    
+  },
+
+
 });
