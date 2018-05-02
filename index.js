@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import RNCommunications from './App';
 
-AppRegistry.registerComponent('PosidoniApp', () => App);
+AppRegistry.registerComponent('PosidoniApp', () => RNCommunications);
