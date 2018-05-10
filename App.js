@@ -31,8 +31,8 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-     value: '',
-     language: '',
+     email: '',
+     textCopy: '',
      
     }
     
@@ -64,9 +64,9 @@ export default class App extends Component {
       </View>
       <View style={styles.secondBlock}>
       <Picker
-        selectedValue={this.state.language}
+        selectedValue={this.state.textCopy}
         style={{ height: 50, width: 200, color: 'white'}}
-        onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
+        onValueChange={(itemValue, itemIndex) => this.setState({textCopy: itemValue})}>
         <Picker.Item label="Option 1" value="text1" />
         <Picker.Item label="Option 2" value="text2" />
         <Picker.Item label="Option 3" value="text3" />
@@ -80,13 +80,13 @@ export default class App extends Component {
       <View style={styles.firstBlock}>
       <Button
           color = '#6A9736'
-          onPress={()=>this.setClipboardContent(this.state.language)} 
+          onPress={()=>this.setClipboardContent(this.state.textCopy)} 
           title="Copy Option"
         />
       </View>
       <View style={styles.firstBlock}>
         
-        <TouchableOpacity onPress={() => Communications.email([ this.state.email ],null,null,'My Subject',this.state.language)}>
+        <TouchableOpacity onPress={() => Communications.email([ this.state.email ],null,null,'My Subject',this.state.textCopy)}>
           <View style={styles.holder}>
             <Text style={styles.text}>SEND EMAIL</Text>
           </View>
