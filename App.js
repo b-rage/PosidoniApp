@@ -58,6 +58,7 @@ export default class App extends Component {
             value = { this.state.email }
             underlineColorAndroid={'transparent'}
             placeholder = 'Insert Email'
+            placeholderTextColor = '#6A9736'
             onChangeText={ text => this.setState({ email: text })}
             />
       </View>
@@ -66,18 +67,19 @@ export default class App extends Component {
         selectedValue={this.state.language}
         style={{ height: 50, width: 200, color: 'white'}}
         onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
-        <Picker.Item label="1" value="text1" />
-        <Picker.Item label="2" value="text2" />
-        <Picker.Item label="3" value="text3" />
-        <Picker.Item label="4" value="text4" />
-        <Picker.Item label="5" value="text5" />
-        <Picker.Item label="6" value="text6" />
-        <Picker.Item label="7" value="text7" />
-        <Picker.Item label="8" value="text8" />
+        <Picker.Item label="Option 1" value="text1" />
+        <Picker.Item label="Option 2" value="text2" />
+        <Picker.Item label="Option 3" value="text3" />
+        <Picker.Item label="Option 4" value="text4" />
+        <Picker.Item label="Option 5" value="text5" />
+        <Picker.Item label="Option 6" value="text6" />
+        <Picker.Item label="Option 7" value="text7" />
+        <Picker.Item label="Option 8" value="text8" />
       </Picker>
       </View>
       <View style={styles.firstBlock}>
       <Button
+          color = '#6A9736'
           onPress={()=>this.setClipboardContent(this.state.language)} 
           title="Copy Option"
         />
