@@ -10,12 +10,17 @@
     "eslint": "^3.19.0",
     "react": "16.3.1",
     "react-native": "0.55.3",
-    "react-native-communications": "^2.2.1"
+    "react-native-clipboard": "0.0.5",
+    "react-native-communications": "^2.2.1",
+    "react-native-form": "^2.1.2",
+    "react-native-list-view-select": "^1.0.4",
+    "react-native-picker-android": "^1.0.3"
   },
   "devDependencies": {
     "babel-jest": "22.4.3",
     "babel-preset-react-native": "4.0.0",
     "jest": "22.4.3",
+    "react-native-select-list": "^1.0.5",
     "react-test-renderer": "16.3.1"
   },
   "jest": {
